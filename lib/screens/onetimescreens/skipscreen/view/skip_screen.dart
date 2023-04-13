@@ -1,16 +1,13 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:loginui/screens/homescreen/view/Shared.dart';
 
-class SecondScreen extends StatefulWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+class SkipScreen extends StatefulWidget {
+  const SkipScreen({Key? key}) : super(key: key);
 
   @override
-  State<SecondScreen> createState() => _SecondScreenState();
+  State<SkipScreen> createState() => _SkipScreenState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _SkipScreenState extends State<SkipScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,20 +37,17 @@ class _SecondScreenState extends State<SecondScreen> {
             ),
             Positioned(
               top: 320,
+              left: 100,
               child: Column(
                 children: [
-                  Text(
-                    "You'r Welcome!!",
-                    style: TextStyle(color: Colors.white, fontSize: 50),
-                  ),
+                  Text('Hello welcome to the app !!',style: TextStyle(color: Colors.white),),
+                  SizedBox(height: 10,),
                   FloatingActionButton.extended(
                     backgroundColor: Color(0XFFE69023),
                     onPressed: () {
-                      Shr shr=Shr();
-                      shr.clearshr();
                       Navigator.pushReplacementNamed(context, 'home');
                     },
-                    label: Text('Log Out'),
+                    label: Text('Skip'),
                   ),
                 ],
               ),

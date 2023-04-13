@@ -125,6 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Map m1 = await shr.readShr();
 
                           if (userEmail == m1['e'] && userPassword == m1['p']) {
+                            shr.createShr(txtemail.text,txtpassword.text,true);
                             Navigator.pushNamed(context, 'second');
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(

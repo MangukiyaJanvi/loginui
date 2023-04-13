@@ -121,7 +121,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           var email=txtemail.text;
                           var password=txtpassword.text;
                           Shr shr=Shr();
-                          shr.createShr(email, password);
+                          shr.createShr(email, password,false);
                           Navigator.pop(context);
                         },
                         label: Text('Sign Up'),
